@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlashCards</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="root.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="">
+    <header class="shadow-(--dropped-shadow)">
+      <div
+        class="header-items container mx-auto px-3 flex justify-between items-center py-4"
+      >
+        <div class="left flex items-center gap-3 flex-1">
+          <button
+            class="icon shrink-0 bg-(--imp-green) hover:bg-(--imp-green-hover) p-1 md:p-2 lg:p-2.5 rounded-lg shadow-(--dropped-shadow) stroke-(--icon-strokes) cursor-pointer"
+          >
+            <img src="menu.png" alt="menu" decoding="async" />
+          </button>
+          <div class="title">
+            <p class="font-extrabold text-lg md:text-xl">FlashCards</p>
+            <p class="capitalize text-(--dark-gray-font) font-semibold text-sm">
+              study smarter
+            </p>
+          </div>
+        </div>
+        <div class="mid relative flex-2">
+          <img
+            src="search.png"
+            alt=""
+            aria-hidden="true"
+            class="absolute left-3 top-1/2 size-4 -translate-y-1/2 lg:block md:block hidden"
+          />
+          <input
+            type="text"
+            placeholder="search categories, words..."
+            class="bg-(--search) w-full rounded-xl py-2 pl-9 pr-3 md:block hidden outline-0 shadow-(--dropped-shadow)"
+          />
+        </div>
+        <div class="right flex justify-end gap-3 flex-1">
+          <button
+            class="icon shrink-0 bg-(--imp-green) hover:bg-(--imp-green-hover) p-1 md:p-2 lg:p-2.5 rounded-lg shadow-(--dropped-shadow) stroke-(--icon-strokes) cursor-pointer"
+          >
+            <img src="settings.png" alt="menu" decoding="async" />
+          </button>
+          <button
+            class="icon shrink-0 bg-(--imp-green) hover:bg-(--imp-green-hover) p-1 md:p-2 lg:p-2.5 rounded-lg shadow-(--dropped-shadow) stroke-(--icon-strokes) cursor-pointer"
+          >
+            <img src="user.png" alt="menu" decoding="async" />
+          </button>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>
