@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body class="">
-    <header class="shadow-(--dropped-shadow)">
+    <header class="relative shadow-(--dropped-shadow)">
       <div
         class="header-items container mx-auto px-3 flex justify-between items-center py-4"
       >
@@ -53,5 +53,73 @@
         </div>
       </div>
     </header>
+    <section class="bg-(--icon-strokes) flex">
+      <div
+        class="sec-items1 container mx-auto flex flex-col items-center py-5 relative"
+      >
+        <h1 class="uppercase font-extrabold text-lg md:text-2xl pl-4 w-full">
+          categories
+        </h1>
+        <button
+          class="icon-add absolute bottom-3 right-3 shrink-0 bg-(--imp-green) hover:bg-(--imp-green-hover) p-1 md:p-2 lg:p-2.5 rounded-full shadow-(--dropped-shadow) stroke-(--icon-strokes) cursor-pointer"
+        >
+          <img src="imgs/add.png" alt="add" decoding="async" />
+        </button>
+        <div class="btns absolute top-1/2 flex justify-between w-full">
+          <button
+            class="icon-left ml-2 shrink-0 bg-white hover:bg-(--hover-lr) p-1 md:p-2 lg:p-2.5 rounded-full shadow-(--dropped-shadow) stroke-(--icon-strokes) cursor-pointer"
+          >
+            <img src="imgs/left.png" alt="left" decoding="async" />
+          </button>
+          <button
+            class="icon-right mr-2 shrink-0 bg-white hover:bg-(--hover-lr) p-1 md:p-2 lg:p-2.5 rounded-full shadow-(--dropped-shadow) stroke-(--icon-strokes) cursor-pointer"
+          >
+            <img src="imgs/right.png" alt="right" decoding="async" />
+          </button>
+        </div>
+        <div
+          class="the-grid w-11/12 grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 justify-center mt-5 mb-5 px-5"
+        >
+          <div
+            class="one cursor-pointer flex justify-center items-center transition-transform duration-200 hover:scale-105"
+          >
+            <img
+              src="imgs/file-orange.png"
+              alt="file"
+              class="w-11/12 h-11/12"
+            />
+          </div>
+          <div
+            class="one cursor-pointer flex justify-center items-center transition-transform duration-200 hover:scale-105"
+          >
+            <img
+              src="imgs/file-yellow.png"
+              alt="file"
+              class="w-11/12 h-11/12"
+            />
+          </div>
+          <div
+            class="one cursor-pointer flex justify-center items-center transition-transform duration-200 hover:scale-105"
+          >
+            <img src="imgs/file-sand.png" alt="file" class="w-11/12 h-11/12" />
+          </div>
+          <div
+            class="one cursor-pointer hidden md:flex justify-center items-center transition-transform duration-200 hover:scale-105"
+          >
+            <img src="imgs/file-sky.png" alt="file" class="w-11/12 h-11/12" />
+          </div>
+          <div
+            class="one md:flex justify-center items-center cursor-pointer hidden transition-transform duration-200 hover:scale-105"
+          >
+            <img src="imgs/file-green.png" alt="file" class="w-11/12 h-11/12" />
+          </div>
+          <div
+            class="one justify-center items-center cursor-pointer hidden transition-transform duration-200 hover:scale-105"
+          >
+            <img src="imgs/file-pink.png" alt="file" class="w-11/12 h-11/12" />
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
