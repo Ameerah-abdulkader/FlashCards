@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="root.css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body class="">
+  <body class="min-h-screen flex flex-col">
     <header class="relative shadow-(--dropped-shadow)">
       <div
         class="header-items container mx-auto px-3 flex justify-between items-center py-4"
@@ -53,10 +53,80 @@
         </div>
       </div>
     </header>
-    <section class="bg-(--icon-strokes) flex">
+    <section class="bg-(--icon-strokes) flex-1 flex">
       <div
         class="sec-items1 container mx-auto flex flex-col items-center py-5 relative"
       >
+        <div
+          class="popup absolute top-[12%] left-1/2 -translate-x-1/2 box-border w-[calc(100%-2rem)] max-w-2xl p-5 sm:p-10 bg-[#f5f0df] rounded-xl shadow-(--dropped-shadow) hidden flex-col sm:flex-row gap-6 sm:gap-12 z-20 scale-100"
+        >
+          <div class="popleft flex flex-col gap-3">
+            <div class="leftup flex gap-3">
+              <button
+                class="color rounded-full bg-(--sky-dark) w-8 h-8 cursor-pointer transition-transform duration-200 hover:scale-107"
+                data-color="sky"
+              ></button>
+              <button
+                class="color rounded-full bg-(--coral-dark) w-8 h-8 cursor-pointer transition-transform duration-200 hover:scale-107"
+                data-color="coral"
+              ></button>
+              <button
+                class="color rounded-full bg-(--lemon-dark) w-8 h-8 cursor-pointer transition-transform duration-200 hover:scale-107"
+                data-color="lemon"
+              ></button>
+              <button
+                class="color rounded-full bg-(--sage-dark) w-8 h-8 cursor-pointer transition-transform duration-200 hover:scale-107"
+                data-color="sage"
+              ></button>
+              <button
+                class="color rounded-full bg-(--sand-dark) w-8 h-8 cursor-pointer transition-transform duration-200 hover:scale-107"
+                data-color="sand"
+              ></button>
+              <button
+                class="color rounded-full bg-(--mauve-dark) w-8 h-8 cursor-pointer transition-transform duration-200 hover:scale-107"
+                data-color="mauve"
+              ></button>
+            </div>
+            <div class="leftdown flex items-center">
+              <img
+                src="imgs/defult-color.png"
+                alt="defult-color"
+                class="w-11/12 h-11/12 defult"
+              />
+            </div>
+          </div>
+          <div class="popright flex flex-col justify-center gap-7">
+            <div class="rightup">
+              <label for="file-name" class="block capitalize mb-1 font-medium"
+                >The file's name</label
+              >
+              <input
+                id="file-name"
+                title="The File's Name"
+                type="text"
+                placeholder="Enter a name"
+                autocomplete="off"
+                class="w-full rounded-lg bg-white px-3 py-2 shadow-(--dropped-shadow) outline-0"
+              />
+            </div>
+            <div class="rightdown">
+              <div class="flex gap-3">
+                <button
+                  type="button"
+                  class="confirm bg-(--imp-green) hover:bg-(--imp-green-hover) px-4 py-2 rounded-lg shadow-(--dropped-shadow) cursor-pointer text-white capitalize"
+                >
+                  confirm
+                </button>
+                <button
+                  type="button"
+                  class="cancel bg-white hover:bg-(--search) px-4 py-2 rounded-lg shadow-(--dropped-shadow) cursor-pointer capitalize"
+                >
+                  cancel
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
         <h1 class="uppercase font-extrabold text-lg md:text-2xl pl-4 w-full">
           categories
         </h1>
@@ -78,48 +148,41 @@
           </button>
         </div>
         <div
-          class="the-grid w-11/12 grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 justify-center mt-5 mb-5 px-5"
+          class="the-grid w-full grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 justify-center px-5 gap-0"
         >
           <div
             class="one cursor-pointer flex justify-center items-center transition-transform duration-200 hover:scale-105"
           >
-            <img
-              src="imgs/file-orange.png"
-              alt="file"
-              class="w-11/12 h-11/12"
-            />
+            <img src="imgs/file-coral.png" alt="file" class="w-4/5 h-4/5" />
           </div>
           <div
             class="one cursor-pointer flex justify-center items-center transition-transform duration-200 hover:scale-105"
           >
-            <img
-              src="imgs/file-yellow.png"
-              alt="file"
-              class="w-11/12 h-11/12"
-            />
+            <img src="imgs/file-lemon.png" alt="file" class="w-4/5 h-4/5" />
           </div>
           <div
             class="one cursor-pointer flex justify-center items-center transition-transform duration-200 hover:scale-105"
           >
-            <img src="imgs/file-sand.png" alt="file" class="w-11/12 h-11/12" />
+            <img src="imgs/file-sand.png" alt="file" class="w-4/5 h-4/5" />
           </div>
           <div
             class="one cursor-pointer hidden md:flex justify-center items-center transition-transform duration-200 hover:scale-105"
           >
-            <img src="imgs/file-sky.png" alt="file" class="w-11/12 h-11/12" />
+            <img src="imgs/file-sky.png" alt="file" class="w-4/5 h-4/5" />
           </div>
           <div
             class="one md:flex justify-center items-center cursor-pointer hidden transition-transform duration-200 hover:scale-105"
           >
-            <img src="imgs/file-green.png" alt="file" class="w-11/12 h-11/12" />
+            <img src="imgs/file-sage.png" alt="file" class="w-4/5 h-4/5" />
           </div>
           <div
             class="one justify-center items-center cursor-pointer hidden transition-transform duration-200 hover:scale-105"
           >
-            <img src="imgs/file-pink.png" alt="file" class="w-11/12 h-11/12" />
+            <img src="imgs/file-mauve.png" alt="file" class="w-4/5 h-4/5" />
           </div>
         </div>
       </div>
     </section>
+    <script src="script.js"></script>
   </body>
 </html>
