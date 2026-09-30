@@ -27,7 +27,7 @@ add.addEventListener("click", () => {
 cancel.addEventListener("click", () => {
   popUp.style.transition = "opacity 250ms ease";
   popUp.style.opacity = "0";
-  defult.src = "../imgs/defult-color.png";
+  defult.src = "imgs/defult-color.png";
 
   setTimeout(() => {
     popUp.style.display = "none";
