@@ -36,6 +36,7 @@ cancel.addEventListener("click", () => {
 
 colors.forEach((color) => {
   color.addEventListener("click", () => {
+	console.log(`imgs/file-${color.dataset.color}.png`);
     defult.src = `imgs/file-${color.dataset.color}.png`;
   });
 });
