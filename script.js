@@ -37,7 +37,7 @@ cancel.addEventListener("click", () => {
 const close = function () {
   popUp.style.transition = "opacity 250ms ease";
   popUp.style.opacity = "0";
-  defult.src = "../imgs/defult-color.png";
+  defult.src = "imgs/defult-color.png";
   fileName.value = "";
 
   setTimeout(() => {
@@ -47,7 +47,7 @@ const close = function () {
 
 colors.forEach((color) => {
   color.addEventListener("click", () => {
-    defult.src = `../imgs/file-${color.dataset.color}.png`;
+    defult.src = `imgs/file-${color.dataset.color}.png`;
   });
 });
 
