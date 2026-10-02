@@ -101,12 +101,11 @@
                 >The file's name</label
               >
               <input
-                id="file-name"
                 title="The File's Name"
                 type="text"
                 placeholder="Enter a name"
                 autocomplete="off"
-                class="w-full rounded-lg bg-white px-3 py-2 shadow-(--dropped-shadow) outline-0"
+                class="file-name w-full rounded-lg bg-white px-3 py-2 shadow-(--dropped-shadow) outline-0"
               />
             </div>
             <div class="rightdown">
@@ -131,7 +130,7 @@
           categories
         </h1>
         <button
-          class="icon-add absolute bottom-3 right-3 shrink-0 bg-(--imp-green) hover:bg-(--imp-green-hover) p-1 md:p-2 lg:p-2.5 rounded-full shadow-(--dropped-shadow) stroke-(--icon-strokes) cursor-pointer"
+          class="icon-add z-10 absolute bottom-3 right-3 shrink-0 bg-(--imp-green) hover:bg-(--imp-green-hover) p-1 md:p-2 lg:p-2.5 rounded-full shadow-(--dropped-shadow) stroke-(--icon-strokes) cursor-pointer"
         >
           <img src="imgs/add.png" alt="add" decoding="async" />
         </button>
@@ -148,39 +147,8 @@
           </button>
         </div>
         <div
-          class="the-grid w-full grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 justify-center px-5 gap-0"
-        >
-          <div
-            class="one cursor-pointer flex justify-center items-center transition-transform duration-200 hover:scale-105"
-          >
-            <img src="imgs/file-coral.png" alt="file" class="w-4/5 h-4/5" />
-          </div>
-          <div
-            class="one cursor-pointer flex justify-center items-center transition-transform duration-200 hover:scale-105"
-          >
-            <img src="imgs/file-lemon.png" alt="file" class="w-4/5 h-4/5" />
-          </div>
-          <div
-            class="one cursor-pointer flex justify-center items-center transition-transform duration-200 hover:scale-105"
-          >
-            <img src="imgs/file-sand.png" alt="file" class="w-4/5 h-4/5" />
-          </div>
-          <div
-            class="one cursor-pointer hidden md:flex justify-center items-center transition-transform duration-200 hover:scale-105"
-          >
-            <img src="imgs/file-sky.png" alt="file" class="w-4/5 h-4/5" />
-          </div>
-          <div
-            class="one md:flex justify-center items-center cursor-pointer hidden transition-transform duration-200 hover:scale-105"
-          >
-            <img src="imgs/file-sage.png" alt="file" class="w-4/5 h-4/5" />
-          </div>
-          <div
-            class="one justify-center items-center cursor-pointer hidden transition-transform duration-200 hover:scale-105"
-          >
-            <img src="imgs/file-mauve.png" alt="file" class="w-4/5 h-4/5" />
-          </div>
-        </div>
+          class="the-grid w-full grid grid-cols-1 grid-rows-3 md:grid-cols-3 md:grid-rows-2 justify-items-center px-5 pt-3 gap-y-5"
+        ></div>
       </div>
     </section>
     <script src="script.js"></script>
