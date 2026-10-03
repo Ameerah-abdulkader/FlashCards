@@ -14,8 +14,8 @@ const cancel = document.querySelector(".cancel");
 const confirm = document.querySelector(".confirm");
 const defult = document.querySelector(".defult"); //img
 const colors = document.querySelectorAll(".color");
-const right = document.querySelector(".icon-right");
-const left = document.querySelector(".icon-left");
+const right = document.querySelector(".icon-right"); // arrow right
+const left = document.querySelector(".icon-left"); //arrow elft
 const fileName = document.querySelector(".file-name");
 let currentPage = 1;
 let itemPerPage = window.innerWidth < 640 ? 4 : 6;
@@ -149,8 +149,34 @@ function showPage() {
   pageItems.forEach((one) => {
     one.classList.remove("hidden");
   });
+
+  const lastPage = Math.ceil(ones.length / itemPerPage);
+
+  if (currentPage > 1) {
+    left.classList.add("bg-white");
+  } else {
+    left.classList.remove("bg-white");
+  }
+
+  if (currentPage < lastPage) {
+    right.classList.add("bg-white");
+  } else {
+    right.classList.remove("bg-white");
+  }
 }
 
-/*right.addEventListener("click", () => {
-  currentPage = 2;
-});*/
+right.addEventListener("click", () => {
+  const lastPage = Math.ceil(
+    document.querySelectorAll(".one").length / itemPerPage,
+  );
+  if (currentPage < lastPage) {
+    currentPage++;
+    showPage();
+  }
+});
+left.addEventListener("click", () => {
+  if (currentPage > 1) {
+    currentPage--;
+    showPage();
+  }
+});
